@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import ImageCard from "./components/image-card/image-card.component";
 import SearchBox from "./components/search-box/search-box.component";
+import NotFound from "./img/notfound.svg";
 
 import "./App.css";
 
@@ -24,6 +25,7 @@ function App() {
 
   return (
     <div className="container">
+
       {isLoading ? (
         <div className="spinner-grow" role="status">
           <span className="sr-only">Loading...</span>
@@ -38,6 +40,7 @@ function App() {
               <SearchBox searchText={text => setTerm(text)} />
             </div>
           </div>
+          {!isLoading && images.length === 0 && <img className="not-found" src={NotFound} />}
           <div className="card-container">
             {images.map((image) => (
               <ImageCard image={image} key={image.id} />
