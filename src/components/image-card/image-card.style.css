@@ -1,0 +1,25 @@
+.card {
+  border-radius: 3px;
+  overflow: hidden;
+  background-color: #fff;
+  padding: 1rem;
+  padding-bottom: 1.4rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+  padding: .5rem 0 1rem 0;
+}
+
+span {
+  background-color: #778fea;
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 100vh;
+  margin: 0 3px;
+  font-size: 1rem;
+}
+
+span:first-of-type {
+  margin-left: 0;
+}

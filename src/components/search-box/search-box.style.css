@@ -1,0 +1,30 @@
+.search-form {
+  position: relative;
+}
+
+input {
+  width: 100%;
+  border: none;
+  padding: 1.2rem 2rem;
+  font-size: 1.5rem;
+  background: #fff;
+  border-radius: .5rem;
+  margin-top: 1rem;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  border: none;
+  background: transparent;
+  position: absolute;
+  right: 1.5rem;
+  top: 45%;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
