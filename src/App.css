@@ -11,14 +11,16 @@
   display: -webkit-box; /* Not needed if autoprefixing */
   display: -ms-flexbox; /* Not needed if autoprefixing */
   display: flex;
-  margin-top: 2.5rem;
-  padding: 0 3rem;
-  margin-left: -2rem; /* gutter size offset */
+  margin: 2.5rem 2rem 0 2rem;
   width: auto;
 }
 .my-masonry-grid_column {
   padding-left: 2rem; /* gutter size */
   background-clip: padding-box;
+}
+
+.my-masonry-grid_column:first-child {
+  padding-left: 0;
 }
 
 /* Style your items */
@@ -130,13 +132,11 @@ img {
 
 @media only screen and (max-width: 80rem) {
   .my-masonry-grid {
-    margin-top: 1.25rem;
-    padding: 0 1.25rem;
-    margin-left: -1rem;
+    margin: 2.5rem 1.5rem 0 1.5rem;
   }
 
   .my-masonry-grid_column {
-    padding-left: -1rem;
+    padding-left: 1.5rem;
   }
 
   .center {
@@ -146,13 +146,11 @@ img {
 
 @media only screen and (max-width: 60rem) {
   .my-masonry-grid {
-    margin-top: 1rem;
-    padding: 0 1rem;
-    margin-left: -0.75rem;
+    margin: 2.5rem 1rem 0 1rem;
   }
 
   .my-masonry-grid_column {
-    padding-left: -0.75rem;
+    padding-left: 1rem;
   }
 
   .center {
