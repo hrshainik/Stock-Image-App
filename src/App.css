@@ -7,15 +7,26 @@
   background-color: #f4f4f4;
 }
 
-.card-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  grid-row-gap: 2rem;
-  grid-column-gap: 2rem;
-  width: 80%;
-  margin-top: 2rem;
+.my-masonry-grid {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-top: 2.5rem;
+  padding: 0 3rem;
+  margin-left: -2rem; /* gutter size offset */
+  width: auto;
+}
+.my-masonry-grid_column {
+  padding-left: 2rem; /* gutter size */
+  background-clip: padding-box;
 }
 
+/* Style your items */
+.my-masonry-grid_column > div {
+  /* change div to reference your elements you put in <Masonry> */
+  background: white;
+  margin-bottom: 2rem;
+}
 
 img {
   width: 100%;
@@ -60,8 +71,8 @@ img {
   background-color: currentColor;
   border-radius: 50%;
   opacity: 0;
-  -webkit-animation: spinner-grow .75s linear infinite;
-  animation: spinner-grow .75s linear infinite;
+  -webkit-animation: spinner-grow 0.75s linear infinite;
+  animation: spinner-grow 0.75s linear infinite;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -80,7 +91,8 @@ img {
   border: 0;
 }
 
-.sr-only-focusable:active, .sr-only-focusable:focus {
+.sr-only-focusable:active,
+.sr-only-focusable:focus {
   position: static;
   width: auto;
   height: auto;
@@ -117,8 +129,14 @@ img {
 }
 
 @media only screen and (max-width: 80rem) {
-  .card-container {
-    width: 95%;
+  .my-masonry-grid {
+    margin-top: 1.25rem;
+    padding: 0 1.25rem;
+    margin-left: -1rem;
+  }
+
+  .my-masonry-grid_column {
+    padding-left: -1rem;
   }
 
   .center {
@@ -127,8 +145,14 @@ img {
 }
 
 @media only screen and (max-width: 60rem) {
-  .card-container {
-    width: 95%;
+  .my-masonry-grid {
+    margin-top: 1rem;
+    padding: 0 1rem;
+    margin-left: -0.75rem;
+  }
+
+  .my-masonry-grid_column {
+    padding-left: -0.75rem;
   }
 
   .center {
@@ -141,7 +165,7 @@ img {
 
   input {
     font-size: 1.4rem;
-    padding: .8rem 1.6rem;
+    padding: 0.8rem 1.6rem;
   }
 
   svg {
