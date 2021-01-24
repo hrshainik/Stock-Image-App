@@ -6,7 +6,7 @@ const ImageCard = ({ image }) => {
 
   return (
     <div className="card">
-      <img src={image.webformatURL} alt="image" />
+      <img src={image.webformatURL} alt="" />
       <h3>{image.user}</h3>
       {tags.map((tag, i) => (
         <span key={i}>#{tag}</span>
