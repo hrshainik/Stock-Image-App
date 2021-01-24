@@ -47,7 +47,7 @@ function App() {
             </div>
           </div>
           {!isLoading && images.length === 0 && (
-            <img className="not-found" src={NotFound} />
+            <img className="not-found" src={NotFound} alt="not found" />
           )}
           <Masonry
             breakpointCols={breakpointColumnsObj}
