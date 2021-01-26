@@ -11,7 +11,6 @@ function App() {
   const [images, setImages] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [term, setTerm] = useState("");
-  const [show, setShow] = useState(false);
   const breakpointColumnsObj = {
     default: 4,
     1100: 3,
