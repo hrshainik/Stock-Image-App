@@ -8,7 +8,12 @@
 
 h3 {
   font-size: 1.8rem;
-  padding: .5rem 0 1rem 0;
+  padding: 0.5rem 0 1rem 0;
+}
+
+.tag-download {
+  display: flex;
+  justify-content: space-between;
 }
 
 span {
@@ -22,4 +27,9 @@ span {
 
 span:first-of-type {
   margin-left: 0;
+}
+
+.download {
+  font-size: 2.2rem;
+  color: #778fea;
 }

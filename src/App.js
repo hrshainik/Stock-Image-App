@@ -11,6 +11,7 @@ function App() {
   const [images, setImages] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [term, setTerm] = useState("");
+  const [show, setShow] = useState(false);
   const breakpointColumnsObj = {
     default: 4,
     1100: 3,
@@ -20,7 +21,7 @@ function App() {
 
   useEffect(() => {
     fetch(
-      `https://pixabay.com/api/?key=${process.env.REACT_APP_PIXABY_API_KEY}&q=${term}&image_type=photo&pretty=true`
+      `https://pixabay.com/api/?key=${process.env.REACT_APP_PIXABY_API_KEY}&q=${term}&image_type=photo&pretty=true&per_page=30`
     )
       .then((res) => res.json())
       .then((data) => {
